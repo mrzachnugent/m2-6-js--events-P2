@@ -18,7 +18,13 @@ const people = [
 // an argument and returns an array of their full names (each full name is a string).
 
 function fullName(peopleArr) {
-  // return something
+  return peopleArr.map((obj) => {
+    if (obj.name.middle !== undefined) {
+      return `${obj.name.first} ${obj.name.middle} ${obj.name.last}`;
+    } else {
+      return `${obj.name.first} ${obj.name.last}`;
+    }
+  });
 }
 
 // 2. Do a console.log to verify your function.

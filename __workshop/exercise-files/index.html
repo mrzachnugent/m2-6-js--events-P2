@@ -4,11 +4,116 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Jost:400,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
+    <script src="script.js" defer></script>
     <title>Signup Form</title>
   </head>
   <body>
-    <script src="script.js"></script>
+    <div class="wrapper">
+      <h1>Signup Form</h1>
+      <form class="form" action="#" method="get" autocomplete="on">
+        <!-- <form
+        class="form"
+        autocomplete="off"
+        action="results.html"
+        method="get"
+        enctype="multipart/form-data"
+      > -->
+        <!-- the get method will lead the user to the action page, it will also put all of the results from the 
+        input in the url of the action page. ex:website.com/results.html?full-name=Zachary+Nugent&street-address=...
+        A post method will be useful when you have a server and you need to save some info. 
+        Browsers can't render post requests, they can only render get requests.
+        Post is set in the body.
+      enctype="multipart/form-data" is for large files being submitted, like pictures for example. Not relevant here-->
+        <div class="form-container">
+          <label
+            >Full name:
+            <input
+              name="full-name"
+              type="text"
+              id="full-name"
+              required
+              name="hidden"
+              autocomplete="name"
+            />
+          </label>
+
+          <label
+            >Street Address
+            <input
+              name="street-address"
+              type="text"
+              id="street-address"
+              required
+              autocomplete="street-address"
+          /></label>
+
+          <label
+            >Email Address
+            <input
+              name="email"
+              type="email"
+              id="email-address"
+              required
+              autocomplete="email"
+          /></label>
+
+          <label
+            >Phone number
+            <input
+              name="phone-number"
+              type="tel"
+              id="phone-number"
+              required
+              autocomplete="tel"
+          /></label>
+
+          <label
+            >Password
+            <input
+              name="password"
+              type="password"
+              id="password"
+              required
+              maxlength="524288"
+              autocomplete="new-password"
+          /></label>
+
+          <label
+            >Confirm Password
+            <input
+              name="confirm-password"
+              type="password"
+              id="confirm-password"
+              required
+              maxlength="524288"
+              autocomplete="new-password"
+          /></label>
+
+          <div class="terms">
+            <label
+              ><input
+                name="terms-of-service"
+                type="checkbox"
+                id="terms-of-service"
+                required
+              />I agree to the
+              <a href="#">terms of service</a>
+            </label>
+          </div>
+          <div class="terms hidden error-message">
+            <p class="error-text"></p>
+          </div>
+        </div>
+        <footer>
+          <button class="clear-btn btn" type="button">Clear</button>
+          <button class="submit-btn btn" type="submit">Submit</button>
+        </footer>
+      </form>
+    </div>
   </body>
 </html>
